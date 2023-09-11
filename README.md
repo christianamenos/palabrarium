@@ -94,12 +94,23 @@ Finally, we can suggest to install recommended extensions in VSCode if a new dev
 
 ### Adding testing
 
-W
-npm install --save-dev @tsconfig/react-native @types/jest @types/react-test-renderer
+This project uses the [Jest](https://jestjs.io/) Testing Framework. In order to install the dependencies, run:
 
-eslint prettier
+```bash
+npx expo install jest-expo jest @tsconfig/react-native @types/jest @types/react-test-renderer -- --save-dev
+```
 
-npm install -D @tsconfig/react-native @types/jest @types/react-test-renderer
+To execute the tests, you just need to run:
+
+```bash
+npm run test
+```
+
+If there are outdated snapshots that need to be regenerated, you can run:
+
+```bash
+npm run test -- -u
+```
 
 ## Run the project
 
@@ -115,7 +126,5 @@ The start command will output a QR code and a local IP address that you can use 
 **NOTE:** The Expo application will take some time to load the application.
 
 Once the application is loaded, any change in the project will be propagated to the application as a hot-reload. If this does not happen, close the Expo app and scan again the QR code.
-
-## Run the tests
 
 ## References
