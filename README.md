@@ -44,6 +44,18 @@ You can install expo application from the [App Store](https://apps.apple.com/us/
 
 ## Create the application
 
+We could create our ReactNative application using the [ReactNative CLI](https://github.com/react-native-community/cli), but since we will be using Expo, we can use the [Expo Go CLI](https://docs.expo.dev/tutorial/create-your-first-app/) instead, which will add additional dependencies to run the application in Expo.
+
+```bash
+npx create-expo-app palabrarium -t expo-template-blank-typescript
+
+cd  palabrarium
+
+npm start
+```
+
+## Confugure `eslint` and `prettier`
+
 ## Run the project
 
 ```bash
