@@ -54,7 +54,52 @@ cd  palabrarium
 npm start
 ```
 
-## Confugure `eslint` and `prettier`
+## Additional configurations
+
+### Adding `eslint` and `prettier`
+
+Adding eslint and prettier is a matter of keeping the same code style for all contributors of the project.
+
+```bash
+# Install ESlint dependencies
+npx expo install eslint eslint-config-prettier eslint-config-universe eslint-plugin-react-hooks -- --save-dev
+```
+
+Now you can create an `eslintrc.json` file with the [eslint configuration](https://eslint.org/docs/latest/use/configure/) we want. In our case we will be using [Expo Universe](https://github.com/expo/expo/tree/master/packages/eslint-config-universe).
+
+You can run `npm run test:eslint` to check the ESlint errors.
+
+**NOTE:** as part of the dependencies of Expo Universe we already installed prettier, so we can just create a configuration file `.prettierrc.json` to add any specific rules.
+
+We can now format the file by pressing `ctrl + shift + p` and select the option `Format document`. We can also make this automatic by selecting the settings on the workspace by searching gor the option `Open Workspace Settings (JSON)`, and change the following settings:
+
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+}
+```
+
+Finally, we can suggest to install recommended extensions in VSCode if a new developer joins the team. We can do this by runnin the command: `ctrl + shift + p` and type `Configure Recommended Extensions (Workspace Folder)`, with the value:
+
+```json
+{
+  "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+}
+```
+
+### Adding testing
+
+W
+npm install --save-dev @tsconfig/react-native @types/jest @types/react-test-renderer
+
+eslint prettier
+
+npm install -D @tsconfig/react-native @types/jest @types/react-test-renderer
 
 ## Run the project
 
